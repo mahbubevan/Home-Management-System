@@ -11,5 +11,5 @@
 <br/>
 <br/>
 <div>
-    <img src="https://dl.dropboxusercontent.com/s/ebrxcyw6u3rlb4k/Screenshot%202019-12-09%20at%2010.34.37%20AM.png?dl=0">
+    <img src="https://dl.dropboxusercontent.com/s/ebrxcyw6u3rlb4k/Screenshot%202019-12-09%20at%2010.34.37%20AM.png?dl=0" width="200px" height="150px">
 </div>
