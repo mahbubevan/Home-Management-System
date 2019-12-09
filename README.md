@@ -11,5 +11,10 @@
 <br/>
 <br/>
 <div>
+<<<<<<< HEAD
     <img src="https://dl.dropboxusercontent.com/s/ebrxcyw6u3rlb4k/Screenshot%202019-12-09%20at%2010.34.37%20AM.png?dl=0">
 </div>
+=======
+    <img src="https://dl.dropboxusercontent.com/s/ebrxcyw6u3rlb4k/Screenshot%202019-12-09%20at%2010.34.37%20AM.png?dl=0" width="200px" height="150px">
+</div>
+>>>>>>> 8daba84a17828195a30e7a65ed9e10a5379f5da8
