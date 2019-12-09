@@ -28,7 +28,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#0">
+            <a class="nav-link" href="transaction_view.php">
               <i class="material-icons">dashboard</i>
               <p>Transaction</p>
             </a>

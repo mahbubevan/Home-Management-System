@@ -28,7 +28,11 @@
           $varatia_id = $_POST['varatia_id'];
           $month = $_POST['month'];
           $payment = $_POST['payment'];
-          $payment_type = $_POST['payment_type'];
+          if(isset($_POST['payment_type'])){
+            $payment_type = $_POST['payment_type'];
+          }else{
+            $payment_type = 3;
+          }
           $year = $_POST['year'];
           $status = $_POST['status'];
           $random_transaction_id = $_POST['random_transaction_id'];
@@ -122,8 +126,8 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Status</label>
-                          <select name="status" id="" class="form-control">
-                                <option value="">-------------</option>
+                          <select name="status" id="payment_status" class="form-control" onchange="changeType()">
+                                <option value="3">-------------</option>
                                 <option value="0">FULL-PAYMENT</option>
                                 <option value="1">Half-PAYMENT</option>
                                 <option value="2">NON-PAYMENT</option>
@@ -135,11 +139,11 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Payement Type</label>
-                          <select name="payment_type" id="" class="form-control">
+                          <select name="payment_type" id="payment_type" class="form-control">
                               <option value="">-----------------</option>
                               <option value="0">Cash</option>
                               <option value="1">Bkash</option>
-                              <option value="0">Check</option>
+                              <option value="2">Check</option>
                           </select>
                         </div>
                       </div>
@@ -225,6 +229,18 @@ function create_UUID(){
     
     xmlhttp.open("GET",'api/get_varatia.php?varatia_id='+varatia_id,true);
     xmlhttp.send();
+  }
+
+  function changeType(){
+    var select = document.getElementById("payment_status");
+    var str = select.options[select.selectedIndex].value;
+    var number = parseInt(str);
+    console.log(number);
+    if(number===2 || number===3){
+      document.getElementById("payment_type").disabled = true;
+      return;
+    }
+    document.getElementById("payment_type").disabled = false;
   }
   
 
